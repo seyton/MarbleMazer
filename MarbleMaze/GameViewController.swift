@@ -11,9 +11,16 @@ import SceneKit
 
 class GameViewController: UIViewController {
 
+    let CollisionCategoryBall   = 1
+    let CollisionCategoryStone  = 2
+    let CollisionCategoryPillar = 4
+    let CollisionCategoryCrate  = 8
+    let CollisionCategoryPearl  = 16
+    
     var scnView: SCNView!
     var scnScene: SCNScene!
-
+    var ballNode: SCNNode!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -31,11 +38,12 @@ class GameViewController: UIViewController {
         
         scnScene = SCNScene(named: "art.scnassets/game.scn")
         scnView.scene = scnScene
-        
     }
     
     func setupNodes() {
         
+        ballNode = scnScene.rootNode.childNodeWithName("ball", recursively: true)
+        ballNode.physicsBody?.contactTestBitMask = CollisionCategoryPillar | CollisionCategoryCrate | CollisionCategoryPearl
     }
     
     func setupSounds() {
