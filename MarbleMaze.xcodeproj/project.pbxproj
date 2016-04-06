@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		62139F5A1CB54F5400FB3EAA /* Bump.wav in Resources */ = {isa = PBXBuildFile; fileRef = 62139F561CB54F5400FB3EAA /* Bump.wav */; };
+		62139F5B1CB54F5400FB3EAA /* GameOver.wav in Resources */ = {isa = PBXBuildFile; fileRef = 62139F571CB54F5400FB3EAA /* GameOver.wav */; };
+		62139F5C1CB54F5400FB3EAA /* Powerup.wav in Resources */ = {isa = PBXBuildFile; fileRef = 62139F581CB54F5400FB3EAA /* Powerup.wav */; };
+		62139F5D1CB54F5400FB3EAA /* Reset.wav in Resources */ = {isa = PBXBuildFile; fileRef = 62139F591CB54F5400FB3EAA /* Reset.wav */; };
 		621DE08F1CB535B100E674C3 /* CoreMotionHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 621DE08A1CB535B000E674C3 /* CoreMotionHelper.swift */; };
 		621DE0901CB535B100E674C3 /* GameHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 621DE08B1CB535B000E674C3 /* GameHelper.swift */; };
 		621DE0911CB535B100E674C3 /* GameUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 621DE08C1CB535B000E674C3 /* GameUtils.swift */; };
@@ -21,6 +25,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		62139F561CB54F5400FB3EAA /* Bump.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Bump.wav; sourceTree = "<group>"; };
+		62139F571CB54F5400FB3EAA /* GameOver.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = GameOver.wav; sourceTree = "<group>"; };
+		62139F581CB54F5400FB3EAA /* Powerup.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Powerup.wav; sourceTree = "<group>"; };
+		62139F591CB54F5400FB3EAA /* Reset.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Reset.wav; sourceTree = "<group>"; };
 		621DE08A1CB535B000E674C3 /* CoreMotionHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreMotionHelper.swift; sourceTree = "<group>"; };
 		621DE08B1CB535B000E674C3 /* GameHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameHelper.swift; sourceTree = "<group>"; };
 		621DE08C1CB535B000E674C3 /* GameUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameUtils.swift; sourceTree = "<group>"; };
@@ -47,6 +55,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		62139F551CB54F5400FB3EAA /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				62139F561CB54F5400FB3EAA /* Bump.wav */,
+				62139F571CB54F5400FB3EAA /* GameOver.wav */,
+				62139F581CB54F5400FB3EAA /* Powerup.wav */,
+				62139F591CB54F5400FB3EAA /* Reset.wav */,
+			);
+			path = Sounds;
+			sourceTree = "<group>";
+		};
 		621DE0891CB535B000E674C3 /* GameUtils */ = {
 			isa = PBXGroup;
 			children = (
@@ -78,6 +97,7 @@
 		62A4D3A11CB3EA4100CF806C /* MarbleMaze */ = {
 			isa = PBXGroup;
 			children = (
+				62139F551CB54F5400FB3EAA /* Sounds */,
 				621DE0891CB535B000E674C3 /* GameUtils */,
 				623203651CB41A570026F5AC /* art.scnassets */,
 				62A4D3A21CB3EA4100CF806C /* AppDelegate.swift */,
@@ -148,7 +168,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				62139F5D1CB54F5400FB3EAA /* Reset.wav in Resources */,
 				62A4D3AF1CB3EA4100CF806C /* LaunchScreen.storyboard in Resources */,
+				62139F5A1CB54F5400FB3EAA /* Bump.wav in Resources */,
+				62139F5C1CB54F5400FB3EAA /* Powerup.wav in Resources */,
+				62139F5B1CB54F5400FB3EAA /* GameOver.wav in Resources */,
 				623203661CB41A570026F5AC /* art.scnassets in Resources */,
 				62A4D3AC1CB3EA4100CF806C /* Assets.xcassets in Resources */,
 				62A4D3AA1CB3EA4100CF806C /* Main.storyboard in Resources */,
