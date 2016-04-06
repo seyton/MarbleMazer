@@ -38,6 +38,7 @@ class GameViewController: UIViewController {
         
         scnScene = SCNScene(named: "art.scnassets/game.scn")
         scnView.scene = scnScene
+        scnScene.physicsWorld.contactDelegate = self
     }
     
     func setupNodes() {
@@ -51,9 +52,40 @@ class GameViewController: UIViewController {
     }
 }
 
+//MARK: - SCNSceneRendererDelegate
 extension GameViewController: SCNSceneRendererDelegate {
     
     func renderer(renderer: SCNSceneRenderer, updateAtTime time: NSTimeInterval) {
         
+    }
+}
+
+//MARK: - SCNPhysicsContactDelegate
+extension GameViewController: SCNPhysicsContactDelegate {
+    
+    func physicsWorld(world: SCNPhysicsWorld, didBeginContact contact: SCNPhysicsContact) {
+        
+        var contactNode: SCNNode
+        
+        if contact.nodeA.name == "ball" {
+            contactNode = contact.nodeB
+        }
+        else {
+            contactNode = contact.nodeA
+        }
+        
+        if contactNode.physicsBody?.categoryBitMask == CollisionCategoryPearl {
+            
+            contactNode.hidden = true
+            contactNode.runAction(SCNAction.waitForDurationThenRunBlock(30, block: { (node) in
+                node.hidden = false
+            }))
+        }
+        
+        if contactNode.physicsBody?.categoryBitMask == CollisionCategoryPillar ||
+            contactNode.physicsBody?.categoryBitMask == CollisionCategoryCrate {
+            
+
+        }
     }
 }
